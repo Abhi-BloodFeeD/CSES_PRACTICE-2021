@@ -2,4 +2,5 @@
 
 <H1>ABHINAV CSES SOLUTIONS</H1>
 
-<img src="tenor.gif" alt = PIKACHU width=95% height=30%>
+<
+<img src="tenor.gif" alt = PIKACHU width=50% height=15%>
