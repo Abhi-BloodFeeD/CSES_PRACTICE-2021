@@ -26,7 +26,7 @@ int main(){
       *up = x;
     }
   }
-  cout<<v.size()<<endl;+
+  cout<<v.size()<<endl;
   
   
   return 0; 
