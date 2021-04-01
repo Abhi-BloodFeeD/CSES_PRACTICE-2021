@@ -13,7 +13,20 @@ int main() {
   freopen("input.txt","r",stdin);
   freopen("output.txt","w",stdout);
   #endif
-  ll n;cin>>n;
+  ll n,x;cin>>n>>x;
+  ll a[n];
+  map<ll,ll>mp;mp[0]=1;
+  ll sum=0;ll score=0;
+  for(ll i=0;i<n;i++){
+    cin>>a[i];
+    sum+=a[i];
+    ll tofind=sum-x;
+    if(mp.find(tofind)!=mp.end()){
+      score+=mp[tofind];
+    }
+    mp[sum]++;
+  }
+  cout<<score<<endl;
   
   return 0; 
 } 

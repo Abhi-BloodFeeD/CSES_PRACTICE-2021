@@ -1,9 +1,19 @@
 
-  
-{2,5}{4,9}{8,9}
-  
-3
-1,2
-2,4
-4,4
 
+
+svector<int>v = {2,5,0}{4,9,1}{8,9,2}
+set<pair<int,int>>st;
+vector<int>v0={0,1,-1};
+st.insert(v0);
+int room = 1 ;
+int result[n];
+for(int i=0;i<n;i++){
+  auto m = st.begin();
+  if(v[i][0]>m[0]]){
+    vector<int>vm;
+    vm.push_back(v[i][0],)
+    vm.push_back(v[i][0])
+    vm.push_back(v[i][0])
+    st.insert()
+  }
+}
