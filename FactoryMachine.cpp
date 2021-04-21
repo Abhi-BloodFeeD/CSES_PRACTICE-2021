@@ -7,12 +7,7 @@ using namespace std;
 const int mod = 1e9+7;
 const int mxN = 1e6;
 const int N = 2e5;
-ll binarySearch(ll *a,ll s,ll e, ll x){
-  ll sum=0;
-  for(ll i=0;i<e-s;i++){
-    sum+=
-  }
-}
+
 
 int main() {
   #ifndef ONLINE_JUDGE
@@ -20,9 +15,29 @@ int main() {
   freopen("output.txt","w",stdout);
   #endif
   ll n;ll t;cin>>n>>t;
-  ll k[n],cum[n];
-  for(ll i=0;i<n;i++)cin>>k[i];
-  
-  
+  ll k[n];
+  for(ll i=0;i<n;i++){
+    cin>>k[i];
+  }
+  ll s=0;
+  ll e=1e18;
+  ll ans=0;
+  while(s<=e){
+    ll mid=(s+e)/2;
+    ll sum=0;
+    for(ll p=0;p<n;p++)
+    {
+      sum+=mid/k[p];
+      if(sum>t)break;
+    }
+    if(sum>=t){
+      ans=mid;
+      e=mid-1;
+    }
+    else {
+      s=mid+1;
+    }
+  }
+  cout<<ans<<"\n";
 return 0; 
 } 
