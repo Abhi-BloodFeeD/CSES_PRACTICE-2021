@@ -16,8 +16,8 @@ int main() {
   #endif
   cin>>n>>m;
   for(int i=0;i<n;++i){
-    cin>>a[i],--a[i];
-  }
+    cin>>a[i],--a[i];}
+
   for(int i=0;i<n;++i){
     if(i){
       for(int j=0;j<m;++j){
@@ -26,14 +26,15 @@ int main() {
           dp[i][j]+=dp[i-1][j-1];
         if(j<m-1)
           dp[i][j]+=dp[i-1][j+1];
-        dp[j][j]%=mod;
+        dp[i][j]%=mod;
       }
-    } else  
+    } 
+    else 
       for(int j=0;j<m;++j)
         dp[0][j]=1;
-    if(~a[i])//cheching for a[i]!=-1
+    if(~a[i])//checking for a[i]!=-1
       for(int j=0;j<m;++j)
-        if(j^a[i])
+        if(j^a[i])//checking if a[i]!=j;
           dp[i][j]=0;
   }
 
@@ -41,7 +42,5 @@ int main() {
   for(int i=0;i<m;++i)
     ans+=dp[n-1][i];
   cout<<ans%mod;
-  
-  
 return 0; 
 } 
